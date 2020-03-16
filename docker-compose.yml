@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  assessment:
+    image: assessment:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ["/src/env.sh", "flask", "run", "--host", "0.0.0.0"]
+    ports:
+      - "5000:5000"
