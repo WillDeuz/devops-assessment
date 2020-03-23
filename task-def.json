@@ -1,5 +1,5 @@
 {
-    "family": "sample-fargate", 
+    "family": "cosa-nostra", 
     "networkMode": "awsvpc", 
     "containerDefinitions": [
         {
@@ -26,5 +26,7 @@
         "FARGATE"
     ], 
     "cpu": "256", 
+    "executionRoleArn": "arn:aws:iam::303981612052:role/ecsTaskExecutionRole",
+    "taskRoleArn": "",
     "memory": "512"
 }
