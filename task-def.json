@@ -1,9 +1,9 @@
 {
-    "family": "cosa-nostra", 
+    "family": "the-familia", 
     "networkMode": "awsvpc", 
     "containerDefinitions": [
         {
-            "name": "tp-app", 
+            "name": "the-app", 
             "image": "the-repo:latest", 
             "portMappings": [
                 {
