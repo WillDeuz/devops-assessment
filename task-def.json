@@ -3,12 +3,12 @@
     "networkMode": "awsvpc", 
     "containerDefinitions": [
         {
-            "name": "fargate-app", 
-            "image": "httpd:2.4", 
+            "name": "tp-app", 
+            "image": "the-repo:latest", 
             "portMappings": [
                 {
-                    "containerPort": 80, 
-                    "hostPort": 80, 
+                    "containerPort": 5000, 
+                    "hostPort": 5000, 
                     "protocol": "tcp"
                 }
             ], 
@@ -18,7 +18,7 @@
 		"-c"
             ], 
             "command": [
-                "/bin/sh -c \"echo '<html> <head> <title>Amazon ECS Sample App</title> <style>body {margin-top: 40px; background-color: #333;} </style> </head><body> <div style=color:white;text-align:center> <h1>Amazon ECS Sample App</h1> <h2>Congratulations!</h2> <p>Your application is now running FINALLY on a container in Amazon ECS.</p> </div></body></html>' >  /usr/local/apache2/htdocs/index.html && httpd-foreground\""
+                "/bin/sh -c \"/src/env.sh flask run --host 0.0.0.0\""
             ]
         }
     ], 
