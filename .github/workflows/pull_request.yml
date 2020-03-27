@@ -1,3 +1,4 @@
+# Executing tests triggered by pull requests
 on: pull_request
 
 name: Test
