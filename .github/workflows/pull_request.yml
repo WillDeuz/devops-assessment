@@ -1,3 +1,4 @@
+# Executing tests triggered by pull requests
 on: pull_request
 
 name: Test
@@ -11,4 +12,4 @@ jobs:
     - name: GitHub Action for pytest
       uses: cclauss/GitHub-Action-for-pytest@master
       with:
-        args: pytest
+        args: python setup.py install && pytest
