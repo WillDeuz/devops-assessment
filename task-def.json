@@ -1,5 +1,5 @@
 {
-    "family": "the-familia", 
+    "family": "the-task",
     "networkMode": "awsvpc", 
     "containerDefinitions": [
         {
